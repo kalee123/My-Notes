@@ -96,7 +96,25 @@ Both threads read the latest value correctly, but neither knows the other is hal
       counter++;
   }
   ```
-- Use `join()` to wait for threads before printing the final value.
+
+### What join() does
+`counter1.join()` means: **the current thread (main) waits here until `counter1` has finished.**
+
+Without it, main keeps going right after `start()` and prints `counter` while the threads are still
+counting, so it prints some random in-between value. That's not the race condition, just printing too early.
+
+```java
+counter1.start();
+counter2.start();
+counter1.join();     // main sleeps until counter1 is done
+counter2.join();     // then until counter2 is done
+System.out.println(counter);   // both finished, so this is the final value
+```
+
+- `join()` also guarantees **visibility**: everything the finished thread wrote is visible to main after
+  `join()` returns, so `counter` doesn't need `volatile` just for printing.
+- `join()` can throw `InterruptedException`, so `main` needs `throws InterruptedException` (or a try/catch).
+- It's Java's version of `pthread_join` in C.
 
 ### Tried
 2 threads × 1,000,000 increments:
