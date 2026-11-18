@@ -21,6 +21,53 @@ System.out.println(counter);
 ```
 `new Thread()` with no lambda creates a thread that has nothing to do.
 
+## Runnable: the work, separate from the worker
+
+`Runnable` is a tiny interface with just one method:
+```java
+public interface Runnable {
+    void run();
+}
+```
+- **`Runnable` = the task** (what to do). **`Thread` = the worker** that runs it.
+- It has only one method, so it's a **functional interface**, which is why a lambda can be a `Runnable`:
+  `() -> { counter++; }` is a `Runnable` whose `run()` is the lambda body.
+- `Thread`'s own `run()` just calls the task it was given:
+  ```java
+  public void run() {
+      if (target != null) {   // target = the Runnable passed to new Thread(...)
+          target.run();
+      }
+  }
+  ```
+
+### 3 ways to give a thread its work
+```java
+// 1. Lambda (most common today)
+new Thread(() -> System.out.println("hi")).start();
+
+// 2. A class that implements Runnable
+class PrintTask implements Runnable {
+    public void run() { System.out.println("hi"); }
+}
+new Thread(new PrintTask()).start();
+
+// 3. A class that extends Thread and overrides run()
+class PrintThread extends Thread {
+    public void run() { System.out.println("hi"); }
+}
+new PrintThread().start();
+```
+
+### Why Runnable is preferred over extends Thread
+- **The task stays separate from the thread**, so the same task can run on a new thread, a thread pool
+  (`ExecutorService.submit(task)`), or just be called directly.
+- Java allows only **one parent class**. Extending `Thread` uses it up; implementing `Runnable` doesn't.
+- Thread pools reuse threads and only accept tasks (`Runnable` / `Callable`), not `Thread` objects.
+
+**Callable** is the version that returns a result and can throw checked exceptions: `call()` instead of
+`run()`. Used with thread pools, it gives back a `Future` to get the result later.
+
 ## start() vs run()
 
 **`start()`**: calls the native method `start0()` through JNI. The JVM's C++ code then calls
