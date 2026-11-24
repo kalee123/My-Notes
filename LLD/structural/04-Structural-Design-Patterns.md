@@ -35,3 +35,5 @@ Full notes: [Facade.md](Facade.md)
 ## Adapter
 
 Make a class with an incompatible interface usable by wrapping it in a class that has the interface the client expects.
+
+Full notes: [Adaptor.md](Adaptor.md)
