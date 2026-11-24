@@ -18,9 +18,9 @@ A pattern is a tool, not a goal. Use one only when the problem it solves actuall
 
 | Category | What it deals with | Patterns |
 |----------|--------------------|----------|
-| **Creational** | How objects are created | Factory, Abstract Factory, Constructor, Singleton, Builder, Prototype |
-| **Structural** | How classes and objects are composed into larger structures | Decorator, Facade, Adapter, Bridge, Composite, Flyweight, Proxy |
-| **Behavioral** | How objects communicate and share responsibilities | Chain of Responsibility, Command, Iterator, Mediator, Observer, Visitor, Interpreter, Template, Memento, State, Strategy |
-| **Architectural** | How the whole application is organised | MVC, MVP, MVVM |
+| **[Creational](03-Creational-Design-Patterns.md)** | How objects are created | Factory, Abstract Factory, Constructor, Singleton, Builder, Prototype |
+| **[Structural](04-Structural-Design-Patterns.md)** | How classes and objects are composed into larger structures | Decorator, Facade, Adapter, Bridge, Composite, Flyweight, Proxy |
+| **[Behavioral](05-Behavioral-Design-Patterns.md)** | How objects communicate and share responsibilities | Chain of Responsibility, Command, Iterator, Mediator, Observer, Visitor, Interpreter, Template, Memento, State, Strategy |
+| **[Architectural](06-Architectural-Design-Patterns.md)** | How the whole application is organised | MVC, MVP, MVVM |
 
 The first three categories come from the "Gang of Four" (GoF) book. Architectural patterns work at a higher level: they shape the entire application rather than a few classes.
