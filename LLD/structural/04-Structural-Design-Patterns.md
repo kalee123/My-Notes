@@ -25,3 +25,9 @@ Why this matters: as a system grows, pieces that were not designed together have
 Add new behaviour to an object by wrapping it in another object with the same interface, without modifying the original class.
 
 Full notes: [Decorator.md](Decorator.md)
+
+## Facade
+
+Provide one simple interface in front of a complex system, so the client does not deal with the inner workings directly.
+
+Full notes: [Facade.md](Facade.md)
