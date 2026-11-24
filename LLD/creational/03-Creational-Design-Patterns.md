@@ -6,7 +6,7 @@ Creational patterns deal with **how objects are created**. Instead of scattering
 
 Why this matters: when code creates objects directly, it is tied to the exact class and to the details of how that class is built. Creational patterns hide those details, so the rest of the code only asks for "an object that can do X" and does not care which class it gets or how it was put together.
 
-![Creational design patterns](images/creational-patterns.png)
+![Creational design patterns](../images/creational-patterns.png)
 
 ## Patterns
 
