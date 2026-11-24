@@ -31,3 +31,7 @@ Full notes: [Decorator.md](Decorator.md)
 Provide one simple interface in front of a complex system, so the client does not deal with the inner workings directly.
 
 Full notes: [Facade.md](Facade.md)
+
+## Adapter
+
+Make a class with an incompatible interface usable by wrapping it in a class that has the interface the client expects.
