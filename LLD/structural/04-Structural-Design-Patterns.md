@@ -23,3 +23,5 @@ Why this matters: as a system grows, pieces that were not designed together have
 ## Decorator
 
 Add new behaviour to an object by wrapping it in another object with the same interface, without modifying the original class.
+
+Full notes: [Decorator.md](Decorator.md)
