@@ -37,3 +37,9 @@ Full notes: [Facade.md](Facade.md)
 Make a class with an incompatible interface usable by wrapping it in a class that has the interface the client expects.
 
 Full notes: [Adaptor.md](Adaptor.md)
+
+## Bridge
+
+Separate two things that vary independently into two class hierarchies, connected by a field, so each can grow without affecting the other.
+
+Full notes: [Bridge.md](Bridge.md)

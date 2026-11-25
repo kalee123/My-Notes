@@ -13,5 +13,6 @@
      - [Decorator](LLD/structural/Decorator.md) ([code](LLD/structural/Decorator-Code/))
      - [Facade](LLD/structural/Facade.md) ([code](LLD/structural/Facade-Code/))
      - [Adapter](LLD/structural/Adaptor.md) ([code](LLD/structural/Adapter-Code/))
+     - [Bridge](LLD/structural/Bridge.md) ([code](LLD/structural/Bridge-Code/))
    - [Behavioral](LLD/behavioral/05-Behavioral-Design-Patterns.md)
    - [Architectural](LLD/architectural/06-Architectural-Design-Patterns.md)
