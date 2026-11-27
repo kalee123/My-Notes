@@ -4,6 +4,7 @@
 1. [Threads and processes](multithreading/01-threads-and-processes.md)
 2. [What `new Thread().start()` really does](multithreading/02-behind-thread-start.md)
 3. [volatile and synchronized](multithreading/03-volatile-and-synchronized.md)
+4. [wait, notify and deadlock](multithreading/04-wait-notify.md)
 
 ## LLD
 1. [SOLID principles](LLD/01-solid.md)
